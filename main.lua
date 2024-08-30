@@ -3341,11 +3341,6 @@ local custom_math = {}; do
 		return velocity;
 	end);
 
-	custom_math.cframe_to_offset = function(origin, target)
-		local actual_origin = origin * CFrame.new(0, -1, 0, 1, 0, 0, 0, 0, 1, 0, -1, 0);
-		return actual_origin:ToObjectSpace(target):inverse();
-	end;
-
 	custom_math.is_mouse_over_frame = function(frame)
 		local mouse_pos = user_input_service:GetMouseLocation();
 		local absolute_position = frame.AbsolutePosition;
